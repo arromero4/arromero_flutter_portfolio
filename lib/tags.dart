@@ -36,7 +36,7 @@ class MyTagsMenu extends StatelessWidget {
                 borderRadius: BorderRadius.circular(29),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 4,
               width: 4,
             )
