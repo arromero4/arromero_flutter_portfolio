@@ -1,32 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_portfolio/widgets/about_me.dart';
 import 'package:flutter_portfolio/widgets/intro.dart';
 import 'package:flutter_portfolio/widgets/tags.dart';
 
-class ComponentList extends StatefulWidget {
-  const ComponentList({super.key});
+class ComponentList extends StatelessWidget {
+  ComponentList({super.key});
 
-  @override
-  State<ComponentList> createState() => _ComponentListState();
-}
+  final List<Widget> widgets = [
+    const SizedBox(
+      height: 50,
+      child: MyTagsMenu(),
+    ),
+    const IntroWidget(),
+  ];
 
-class _ComponentListState extends State<ComponentList> {
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children: [
-        Column(
-          children: [
-            SizedBox(
-              height: 50,
-              child: MyTagsMenu(),
-            ),
-            Expanded(
-              flex: 4,
-              child: IntroWidget(),
-            ),
-          ],
-        ),
-      ],
+    return ListView.builder(
+      itemBuilder: (context, index) {
+        return widgets[index];
+      },
+      itemCount: widgets.length,
     );
   }
 }

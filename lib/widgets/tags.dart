@@ -11,37 +11,34 @@ class MyTagsMenu extends StatelessWidget {
       'Services',
       'Contact Me'
     ];
-    return ListView.builder(
+    return ListView.separated(
       scrollDirection: Axis.horizontal,
       itemCount: filters.length,
+      separatorBuilder: (_, __) => const SizedBox(width: 4),
       itemBuilder: (context, index) {
         final filter = filters[index];
-        return Wrap(
-          children: <Widget>[
-            Chip(
-              elevation: 3,
-              shadowColor: Colors.black,
-              label: Text(
-                filter,
-                style: const TextStyle(color: Colors.white),
-              ),
-              labelStyle: const TextStyle(
-                fontSize: 16,
-              ),
-              backgroundColor: Colors.black,
-              side: const BorderSide(
-                color: Colors.white,
-              ),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(29),
-              ),
-            ),
-            const SizedBox(
-              height: 4,
-              width: 4,
-            )
-          ],
+        return Chip(
+          elevation: 3,
+          shadowColor: Colors.black,
+          label: Text(
+            filter,
+            style: const TextStyle(color: Colors.white),
+          ),
+          labelStyle: const TextStyle(
+            fontSize: 16,
+          ),
+          backgroundColor: Colors.black,
+          side: const BorderSide(
+            color: Colors.white,
+          ),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(29),
+          ),
         );
+        //const SizedBox(
+        //height: 4,
+        //width: 4,
+        //)
       },
     );
   }
