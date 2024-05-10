@@ -8,18 +8,13 @@ class IntroWidget extends StatefulWidget {
 }
 
 class _IntroWidgetState extends State<IntroWidget> {
-  List<String> introButtons = [
-    'Hire Me',
-    'Download CV',
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.all(2),
       decoration: BoxDecoration(
         color: const Color.fromRGBO(229, 229, 229, 1),
-        borderRadius: BorderRadius.circular(15),
+        borderRadius: BorderRadius.circular(25),
         boxShadow: const [
           BoxShadow(
             color: Colors.grey,

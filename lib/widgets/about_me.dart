@@ -8,164 +8,62 @@ class AboutMeWidget extends StatefulWidget {
 }
 
 class _AboutMeWidgetState extends State<AboutMeWidget> {
-  List<String> introButtons = [
-    'Hire Me',
-    'Download CV',
-  ];
-
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children: [
-        Container(
-          decoration: BoxDecoration(
-            color: const Color.fromRGBO(229, 229, 229, 1),
-            borderRadius: BorderRadius.circular(15),
-            boxShadow: const [
-              BoxShadow(
-                color: Colors.grey,
-                spreadRadius: 1,
-                blurRadius: 5,
-                offset: Offset(0, 8),
-              ),
-            ],
+    return Container(
+      margin: const EdgeInsets.all(2),
+      decoration: BoxDecoration(
+        color: const Color.fromRGBO(229, 229, 229, 1),
+        borderRadius: BorderRadius.circular(25),
+        boxShadow: const [
+          BoxShadow(
+            color: Colors.grey,
+            spreadRadius: 1,
+            blurRadius: 5,
+            offset: Offset(0, 8),
           ),
-          child: Column(
-            children: <Widget>[
-              Row(
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(30.0),
-                    child: SizedBox(
-                      height: 200,
-                      width: 200,
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(20.0),
-                        child: Image.asset(
-                          'assets/images.png',
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              const Row(
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.all(2.0),
-                    child: Text(
-                      'Hello',
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              const Row(
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.all(2.0),
-                    child: Text(
-                      'I\'m Andres Romero',
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              const Row(
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.all(2.0),
-                    child: Text(
-                      'Software Developer',
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.black,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(20.0, 5.0, 20.0, 30.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Expanded(
-                      flex: 1,
-                      child: ElevatedButton(
-                        onPressed: () {},
-                        style: ElevatedButton.styleFrom(
-                          elevation: 4,
-                          shadowColor: Colors.black,
-                          backgroundColor: Colors.black,
-                          side: const BorderSide(
-                            color: Colors.white,
-                          ),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(29),
-                          ),
-                        ),
-                        child: const Text(
-                          'Hire Me',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 16,
-                          ),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 4,
-                      width: 4,
-                    ),
-                    Expanded(
-                      flex: 1,
-                      child: ElevatedButton(
-                        onPressed: () {},
-                        style: ElevatedButton.styleFrom(
-                          elevation: 4,
-                          shadowColor: Colors.black,
-                          backgroundColor: Colors.black,
-                          side: const BorderSide(
-                            color: Colors.white,
-                          ),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(29),
-                          ),
-                        ),
-                        child: const Text(
-                          'Download CV',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 16,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
-      ],
+        ],
+      ),
+      child: Column(
+        children: [
+          _buildTitle('About Me'),
+          _buildDescription(
+              'I\'m a software developer for websites and mobile applications. With the help of the Figma design tool. I also like prototyping which help me to expand my knowledge to be able to share it with you. If you have any questions contact me and I will give you my best effort to show the result to your requirement as soon as possible. If you really like my work then follow me on X or Threads where I share my journey through the programming world.'),
+        ],
+      ),
     );
   }
+}
+
+Widget _buildTitle(String text) {
+  return Padding(
+    padding: const EdgeInsets.fromLTRB(10, 30, 10, 10),
+    child: Text(
+      text,
+      style: const TextStyle(
+        fontSize: 20,
+        color: Colors.black,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+  );
+}
+
+Widget _buildDescription(String text) {
+  return Column(
+    crossAxisAlignment: CrossAxisAlignment.center,
+    children: [
+      Padding(
+        padding: const EdgeInsets.fromLTRB(15, 15, 15, 30),
+        child: Text(
+          text,
+          textAlign: TextAlign.center,
+          style: const TextStyle(
+            fontSize: 20,
+            color: Colors.black,
+          ),
+        ),
+      ),
+    ],
+  );
 }
