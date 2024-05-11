@@ -58,9 +58,12 @@ Widget _buildDescription(String text) {
         child: Text(
           text,
           textAlign: TextAlign.center,
+          softWrap: true,
           style: const TextStyle(
             fontSize: 20,
             color: Colors.black,
+// Suggested code may be subject to a license. Learn more: ~LicenseLog:3830931881.
+            height: 1,
           ),
         ),
       ),
