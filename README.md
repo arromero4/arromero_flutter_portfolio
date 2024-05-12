@@ -2,7 +2,7 @@
 
 <!-- Coloca una imagen representativa de tu desarrollo siempre que puedas -->
 
-![Texto ALT de la imagen que utilices para mostrar el proyecto]([assets\portada-idx.JPG](https://github.com/arromero4/arromero_flutter_portfolio/blob/main/assets/portada-idx.JPG))
+![Texto ALT de la imagen que utilices para mostrar el proyecto](https://github.com/arromero4/arromero_flutter_portfolio/blob/main/assets/portada-idx.JPG)
 
 ## Descripción
 
