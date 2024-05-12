@@ -39,6 +39,7 @@ class _WorkExperienceState extends State<WorkExperience> {
               'Uninet S.A. de C.V.',
               'May 2016 - Current',
               'Create technical documentation, procedures and reports using my programming skills to deliver contractor invoices on time. Reduced time from 7 days to 1 day. Responsible for technical support and operation of Telmex branches providing internal services in CDMX, State of Mexico and Guerrero (+190 branches). Execute maintenance windows and interventions in coordination with contractors (2 to 4 people per activity). Effective communication with internal and external contractors. Preventive reviews of IT infrastructure to ensure service availability.'),
+              const SizedBox(height: 20),
         ],
       ),
     );
