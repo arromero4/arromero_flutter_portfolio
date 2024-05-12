@@ -123,7 +123,7 @@ Widget _buildContactMeSection() {
             const Padding(
               padding: EdgeInsets.all(12.0),
               child: Text(
-                '55 2539 5790',
+                '55 62 36 66 22',
                 style: TextStyle(fontSize: 20),
               ),
             ),
