@@ -8,7 +8,7 @@
 
 Bienvenido a mi portafolio de desarrollo móvil   
 
- un espacio donde he mis experiencias que reflejan mi pasión y habilidades en el mundo de la programación. Este portafolio está construido utilizando Flutter.
+Un espacio donde muestro mis experiencias que reflejan mi pasión y habilidades en el mundo de la programación. Este portafolio está construido utilizando Flutter.
 
 
 ## Tecnologías utilizadas
